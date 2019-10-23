@@ -18,7 +18,5 @@ public abstract class Character {
         this.weapon = weapon;
     }
 
-    public void display(){
-        System.out.println("Hmm");
-    }
+    public abstract void display();
 }
