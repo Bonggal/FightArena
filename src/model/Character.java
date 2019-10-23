@@ -1,13 +1,24 @@
 package model;
 
+import behaviour.weaponBehaviour.behaviourImplementation.UseKnife;
 import behaviour.weaponBehaviour.behaviourInterface.WeaponBehaviour;
 
 public abstract class Character {
-    protected WeaponBehaviour weapon;
+    protected WeaponBehaviour weapon = new UseKnife();
+    protected String name = "Someone";
 
-    protected Character(){}
+    protected Character() {
+    }
 
-    public void fight() {
-        System.out.println("Attack using " + weapon.useWeapon());
+    public void fight(Character character) {
+        System.out.println(name + " attack " + character.name + " using " + weapon.useWeapon());
+    }
+
+    public void setWeapon(WeaponBehaviour weapon) {
+        this.weapon = weapon;
+    }
+
+    public void display(){
+        System.out.println("Hmm");
     }
 }

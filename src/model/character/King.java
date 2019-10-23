@@ -7,4 +7,13 @@ public class King extends Character {
     public King(){
         super.weapon = new UseBowAndArrow();
     }
+
+    public King(String name){
+        super.name = "King " + name;
+        super.weapon = new UseBowAndArrow();
+    }
+
+    public void display(){
+        System.out.println("I am a King");
+    }
 }
